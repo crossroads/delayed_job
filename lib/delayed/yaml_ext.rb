@@ -16,14 +16,14 @@ class Module
       out.scalar(taguri, self.name, :plain)
     }
   end
-  
+
   def yaml_tag_read_class(name)
     # Constantize the object so that ActiveSupport can attempt
     # its auto loading magic. Will raise LoadError if not successful.
     name.constantize
     name
   end
-  
+
 end
 
 class Class
